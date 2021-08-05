@@ -24,9 +24,9 @@ function App() {
         <div className = "content">
           <Heading className = "title" as="h1">HomeLab Dashboard</Heading>
 
-          <Wrap spacing = "10px" justify="center">
+          <Wrap justify="center">
           {data.map(({name, img, to}) => 
-            <a href = {to} target = "blank">
+            <a key = {name} href = {to} target = "blank">
               <WrapItem>
                 <Flex
                   p={50}
@@ -42,22 +42,22 @@ function App() {
                     rounded="lg"
                   >
                     <Box px={4} py={2}>
-                      <chakra.h1
+                      <chakra.h2
                         color="#1A202C"
                         fontWeight="bold"
-                        fontSize="3xl"
+                        fontSize="2xl"
                         textAlign = "center"
                       >
                         {name}
-                      </chakra.h1>
+                      </chakra.h2>
 
                       <Image
-                        h={64}
-                        w={64}
+                        h={48}
+                        w={48}
                         fit="contain"
                         p={5}
                         src={img}
-                        alt="Nextcloud"
+                        alt={name}
                       />
                     </Box>
 
