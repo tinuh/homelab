@@ -1,6 +1,6 @@
 import './style.css';
 import Particles from "./particles";
-import { Heading, Box, Flex, Image, chakra} from '@chakra-ui/react';
+import { Heading, Box, Flex, Image, Wrap, WrapItem, chakra} from '@chakra-ui/react';
 import data from "./data/data.json";
 
 function App() {
@@ -24,47 +24,49 @@ function App() {
         <div className = "content">
           <Heading className = "title" as="h1">HomeLab Dashboard</Heading>
 
-          <Flex>
+          <Wrap spacing = "10px" justify="center">
           {data.map(({name, img, to}) => 
             <a href = {to} target = "blank">
-              <Flex
-                p={50}
-                w="full"
-                alignItems="center"
-                justifyContent="center"
-              >
-                <Box
-                  maxW="xs"
-                  mx="auto"
-                  bg="white"
-                  shadow="lg"
-                  rounded="lg"
+              <WrapItem>
+                <Flex
+                  p={50}
+                  w="full"
+                  alignItems="center"
+                  justifyContent="center"
                 >
-                  <Box px={4} py={2}>
-                    <chakra.h1
-                      color="#1A202C"
-                      fontWeight="bold"
-                      fontSize="3xl"
-                      textAlign = "center"
-                    >
-                      {name}
-                    </chakra.h1>
+                  <Box
+                    maxW="xs"
+                    mx="auto"
+                    bg="white"
+                    shadow="lg"
+                    rounded="lg"
+                  >
+                    <Box px={4} py={2}>
+                      <chakra.h1
+                        color="#1A202C"
+                        fontWeight="bold"
+                        fontSize="3xl"
+                        textAlign = "center"
+                      >
+                        {name}
+                      </chakra.h1>
 
-                    <Image
-                      h={64}
-                      w={64}
-                      fit="contain"
-                      p={5}
-                      src={img}
-                      alt="Nextcloud"
-                    />
+                      <Image
+                        h={64}
+                        w={64}
+                        fit="contain"
+                        p={5}
+                        src={img}
+                        alt="Nextcloud"
+                      />
+                    </Box>
+
                   </Box>
-
-                </Box>
-              </Flex>
+                </Flex>
+              </WrapItem>
             </a>
           )}
-          </Flex>
+          </Wrap>
         
         </div>
         
