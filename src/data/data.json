@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Next Cloud",
+    "img": "imgs/nextcloud.svg",
+    "to": "https://cloud.tinu.tech"
+  },
+  {
+    "name": "Home Assistant",
+    "img": "imgs/home_assistant.svg",
+    "to": "https://home.tinu.tech"
+  },
+  {
+    "name": "Plex",
+    "img": "imgs/plex.svg",
+    "to": "https://plex.tinu.tech"
+  },
+  {
+    "name": "Pi-Hole",
+    "img": "imgs/pihole.png",
+    "to": "http://192.168.1.4/admin/"
+  }
+]
